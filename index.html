@@ -7610,17 +7610,83 @@
                     position: relative;
                   }
                 </style>
-                <form name="gform" method="POST" data-netlify="false" action="https://script.google.com/macros/s/AKfycbzzpfvUVr3bQmER1HzrMp_6zP6r4H-adrT1inTKRjiFmoBnqQnsm1gaBgAj0b_Ce8P2/exec">
-                  <label>Аты-жөніңіз:</label><br>
-                  <input type="text" name="name" required><br><br>
-                
-                  <label>Қатысуыңыз:</label><br>
-                  <input type="radio" name="response" value="Келемін" required> Келемін<br>
-                  <input type="radio" name="response" value="Жұбыммен келемін"> Жұбыммен келемін<br>
-                  <input type="radio" name="response" value="Қатыса алмаймын"> Өкінішке орай, қатыса алмаймын<br><br>
-                
-                  <button type="submit">Жіберу</button>
-                </form>
+                <form
+                action="https://script.google.com/macros/s/AKfycbzzpfvUVr3bQmER1HzrMp_6zP6r4H-adrT1inTKRjiFmoBnqQnsm1gaBgAj0b_Ce8P2/exec"
+                method="POST"
+                class="t-form"
+                style="font-family: Georgia; font-size: 16px; color: black"
+              >
+                <div class="t-form__inputsbox">
+                  <!-- Имя -->
+                  <div
+                    class="t-input-group"
+                    style="margin-bottom: 20px"
+                  >
+                    <label
+                      for="name"
+                      class="t-input-title"
+                      style="display: block; font-size: 19px; padding-bottom: 5px"
+                      >Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуыңызды өтінеміз)</label
+                    >
+                    <input
+                      id="name"
+                      name="Name"
+                      type="text"
+                      required
+                      placeholder="Есіміңіз"
+                      style="width: 100%; padding: 8px; border: 1px solid black; border-radius: 10px; height: 40px;"
+                    />
+                  </div>
+              
+                  <!-- Радио-кнопки -->
+                  <div class="t-input-group" style="margin-bottom: 20px">
+                    <fieldset>
+                      <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" name="Radio" value="Келемін" required />
+                        Келемін
+                      </label>
+                      <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" name="Radio" value="Жұбыммен келемін" />
+                        Жұбыммен келемін
+                      </label>
+                      <label style="display: block;">
+                        <input type="radio" name="Radio" value="Өкінішке орай, қатыса алмаймын" />
+                        Өкінішке орай, қатыса алмаймын
+                      </label>
+                    </fieldset>
+                  </div>
+              
+                  <!-- Кнопка -->
+                  <div class="tn-form__submit">
+                    <button
+                      type="submit"
+                      style="
+                        background-color: black;
+                        color: white;
+                        padding: 10px 20px;
+                        font-size: 15px;
+                        border: none;
+                        border-radius: 15px;
+                        cursor: pointer;
+                        width: 160px;
+                        height: 50px;
+                        font-weight: 600;
+                      "
+                    >
+                      Жіберу
+                    </button>
+                  </div>
+              
+                  <!-- Сообщение об успехе (необязательное) -->
+                  <div
+                    class="t-form__successbox"
+                    style="display: none; color: green; margin-top: 10px"
+                  >
+                    Сәтті жіберілді!
+                  </div>
+                </div>
+              </form>
+              
                 <style id="t-zero-form-btn-styles-1696918946848-876692464">
                   #rec876692464 [data-elem-id="1696918946848"] .t-submit {
                     color: #ffffff;
